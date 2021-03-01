@@ -7,21 +7,37 @@
     <title>Todo List</title>
 </head>
 <body>
-    <aside>
-        <h2>Projects</h2>
-        <div class="projects">
-            <div>General</div>
-        </div>
-    </aside>
+    <div class="container">
+        <aside>
+            <h2>Projects</h2>
+            <div class="projects">
+                <div>General</div>
+                <div>Hobbies</div>
+                <div>etc.</div>
+                <button>add</button>
+            </div>
+        </aside>
 
-    <main>
-        <h1>General</h1>
-        <div class="todos">
-            <div>Todo 1</div>
-            <div>Todo 2</div>
-        </div>
-    </main>
-
+        <main>
+            <h1>General</h1>
+            <div id="todo-container">
+                <div class="todo">
+                    <div>
+                        <input type="checkbox" id="todo1" name="todo1">
+                        <div>Todo1</div>
+                    </div>
+                    <div>Due Date</div>
+                </div>
+                <div class="todo">
+                    <div>
+                        <input type="checkbox" id="todo2" name="todo2">
+                        <div>Todo2</div>
+                    </div>
+                    <div>Due Date</div>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
