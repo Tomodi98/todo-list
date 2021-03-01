@@ -1,3 +1,42 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    justify-content: start;
+}
+
+aside {
+    background-color: lightblue;
+    height: 90vh;
+}
+
+main {
+    margin-left: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+#todo-container {
+    background-color: teal;
+}
+
+.todo {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: lightcoral;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.todo > div {
+    display: flex;
+    margin-left: 10px;
+}
