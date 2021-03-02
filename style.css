@@ -2,7 +2,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
+#container {
     display: grid;
     grid-template-columns: 1fr 5fr;
     justify-content: start;
@@ -40,4 +40,8 @@ h1, h2 {
 .todo > div {
     display: flex;
     margin-left: 10px;
+}
+
+#addProject {
+    display: none;
 }
