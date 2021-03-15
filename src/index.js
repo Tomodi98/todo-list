@@ -2,9 +2,15 @@ import '../dist/style.css';
 import {todosList, projects, addTodo, addProject} from './objects.js';
 import {showForm, changeButtonStyle} from './DOMmanipulation.js';
 
+const addProjectButton = document.querySelector ('.projects > .plusButton');
+
+let addTodoButton = document.querySelectorAll('.todo');
+addTodoButton = addTodoButton[addTodoButton.length - 1].firstElementChild.firstElementChild;
+
 addTodo('Todo1', 'Due date', 'description', 'priority', false);
 addTodo('Todo2', 'Due date', 'description', 'priority', false);
-console.log(todosList[0].title);
 
-document.querySelector('.projects > button').addEventListener('click', function(){showForm(document.querySelector('#addProject'))});
-document.querySelector ('.projects > .plusButton').addEventListener('click', function() {changeButtonStyle()});
+addProjectButton.addEventListener('click', function(){showForm(document.querySelector('#addProject'))});
+addProjectButton.addEventListener('click', function(){changeButtonStyle(addProjectButton)});
+
+addTodoButton.addEventListener('click', function(){changeButtonStyle(addTodoButton)});
