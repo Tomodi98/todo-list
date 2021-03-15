@@ -19,11 +19,17 @@ function changeButtonStyle (button) {
     }
 }
 
-function renderArray (container, array, cssClass) {
-
+function renderArray (container, array) {
+    let node;
+    for (let i = 0; i < array.length; i++) {
+        node = document.createElement('div');
+        node.textContent = array[i];
+        container.appendChild(node);
+    }
 }
 
 export {
     showForm,
-    changeButtonStyle
+    changeButtonStyle,
+    renderArray
 };
