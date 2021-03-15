@@ -13,4 +13,7 @@ addTodo('Todo2', 'Due date', 'description', 'priority', false);
 addProjectButton.addEventListener('click', function(){showForm(document.querySelector('#addProject'))});
 addProjectButton.addEventListener('click', function(){changeButtonStyle(addProjectButton)});
 
+
+addTodoButton.addEventListener('click', function(){showForm(document.querySelectorAll('.addToDo')[0])});
+addTodoButton.addEventListener('click', function(){showForm(document.querySelectorAll('.addToDo')[1])});
 addTodoButton.addEventListener('click', function(){changeButtonStyle(addTodoButton)});
