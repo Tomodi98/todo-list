@@ -28,8 +28,18 @@ function renderArray (container, array) {
     }
 }
 
+function renderTasks (container, selectedProject, array) {
+    let node;
+    for (let i = 0; i < array.length; i++) {
+        node = document.createElement('div');
+        node.textContent = array[i].title;
+        container.appendChild(node);
+    }
+}
+
 export {
     showForm,
     changeButtonStyle,
-    renderArray
+    renderArray,
+    renderTasks
 };

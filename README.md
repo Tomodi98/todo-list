@@ -9,7 +9,7 @@ See the project [LIVE](https://tomodi98.github.io/todo-list/)
 
 Html, css and javascript, webpack, npm, git
 
-## How to use
+## How to use (still in progress)
 
 You can add projects to keep your tasks separate. If this is not necessary you can just add your
 tasks to the default project called "General".

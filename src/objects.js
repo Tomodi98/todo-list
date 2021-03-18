@@ -2,7 +2,7 @@ let todosList = [];
 let projects = [];
 
 //todo constructor
-function Todo(title, dueDate, description, priority, done) {
+function Todo(title, dueDate, project, description, priority, done) {
     this.title = title;
     this.dueDate = dueDate;
     this.description = description;
@@ -11,8 +11,8 @@ function Todo(title, dueDate, description, priority, done) {
 }
 
 //function that creates todos and saves them as objects
-function addTodo(title, dueDate, description, priority, done) {
-    let newTodo = new Todo(title, dueDate, description, priority, done);
+function addTodo(title, dueDate, project, description, priority, done) {
+    let newTodo = new Todo(title, dueDate, project, description, priority, done);
     todosList.push(newTodo);
 }
 
