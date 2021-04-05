@@ -6,7 +6,7 @@ const addProjectButton = document.querySelector ('aside > button');
 let addTodoButton = document.querySelectorAll('.todo');
 addTodoButton = addTodoButton[addTodoButton.length - 1].firstElementChild.firstElementChild;
 const projectContainer = document.querySelector('.projects');
-const taskContainer = document.querySelector('#todo-container');
+const taskContainer = document.querySelector('#tasks');
 const selectedProject = document.querySelector('main > h1');
 const confirmProject = document.querySelector('#addProject > button');
 
