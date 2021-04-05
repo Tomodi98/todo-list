@@ -12,11 +12,8 @@ const confirmProject = document.querySelector('#addProject > button');
 
 //testing functions
 addTodo('Todo1', 'Due date', 'General', 'description', 'priority', false);
-addTodo('Todo2', 'Due date', 'General', 'description', 'priority', false);
+addTodo('Todo2', 'Due date 2', 'General', 'description', 'priority', false);
 addProject ('General');
-addProject ('Hobbies');
-addProject ('example 2');
-addProject ('example 3');
 
 //renders saved projects on app load
 renderArray (projectContainer, projects);

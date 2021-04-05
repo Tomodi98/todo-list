@@ -50,10 +50,33 @@ function renderProject (name, index) {
 //showing other values (description etc.) on demand
 function renderTasks (container, selectedProject, array) {
     let node;
+    let tempContainer;
+    let temp;
     for (let i = 0; i < array.length; i++) {
+        //adds a class to the task
+        node = document.createElement('div');
+        node.classList.add('todo');
+        container.appendChild(node);
+        tempContainer = node;
+
+        //adds text to the task
+
+        node = document.createElement('div');
+        tempContainer.appendChild(node);
+        temp = tempContainer;
+        tempContainer = node;
+        
+        node = document.createElement('input');
+        node.setAttribute('type', 'checkbox');
+        tempContainer.appendChild(node);
+
         node = document.createElement('div');
         node.textContent = array[i].title;
-        container.appendChild(node);
+        tempContainer.appendChild(node);
+
+        node = document.createElement('div');
+        node.textContent = array[i].dueDate;
+        temp.appendChild(node);
     }
 }
 
