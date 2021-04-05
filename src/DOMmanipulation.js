@@ -1,4 +1,4 @@
-import {addProject} from './objects.js';
+import {addProject, todosList} from './objects.js';
 import {projectContainer} from './index.js';
 
 function showForm (form) {
@@ -25,6 +25,7 @@ function renderArray (container, array) {
         node = document.createElement('div');
         node.setAttribute('data-index', i);
         node.textContent = array[i];
+        node.addEventListener('click', function() {clickProject(this)});
         container.appendChild(node);
     }
 }
@@ -43,7 +44,17 @@ function renderProject (name, index) {
     let node = document.createElement ('div');
     node.setAttribute('data-index', index);
     node.textContent = name;
+    node.addEventListener('click', function() {clickProject(this)});
     projectContainer.appendChild(node);
+}
+
+function clickProject (e) {
+    //changes the title of selected project
+    const currentProject = document.querySelector('main > h1');
+    currentProject.textContent = e.textContent;
+
+    //displays tasks that belong to selected project
+
 }
 
 //needs to render task name and due date with an option of
@@ -52,10 +63,12 @@ function renderTasks (container, selectedProject, array) {
     let node;
     let tempContainer;
     let temp;
+    selectedProject = document.querySelector('main > h1');
     for (let i = 0; i < array.length; i++) {
         //adds a class to the task
         node = document.createElement('div');
         node.classList.add('todo');
+        node.setAttribute('data-index', i);
         container.appendChild(node);
         tempContainer = node;
 
