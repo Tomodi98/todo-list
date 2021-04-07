@@ -11,6 +11,11 @@ html {
 aside {
     background-color: lightblue;
     height: 90vh;
+    border-radius: 25px;
+}
+
+aside > h2 {
+    margin: 5px 0 0 5px;
 }
 
 main {
@@ -27,8 +32,8 @@ h1, h2 {
     cursor: pointer;
 }
 
-#todo-container {
-    background-color: teal;
+.projects > div:hover {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .todo {
@@ -36,10 +41,42 @@ h1, h2 {
     flex-flow: row wrap;
     margin-bottom: 25px;
     padding: 10px;
-    background-color: lightcoral;
+    border-bottom: solid 1px black;
+    border-right: solid 1px black;
+    border-radius: 25px;
     justify-content: space-between;
     width: 60%;
     cursor: pointer;
+    background-color: lightblue;
+}
+
+.todo:hover {
+    background-color: rgba(173, 216, 230, 0.5);
+}
+
+/*different colors for different priorities*/
+.todo-prio-1 {
+    background-color: green;
+}
+
+.todo-prio-1:hover {
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+.todo-prio-2 {
+    background-color: yellow;
+}
+
+.todo-prio-2:hover {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+.todo-prio-3 {
+    background-color: red;
+}
+
+.todo-prio-3:hover {
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 .todo > div {
