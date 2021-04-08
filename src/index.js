@@ -1,6 +1,6 @@
 import '../dist/style.css';
 import {todosList, projects, addTodo, addProject} from './objects.js';
-import {showForm, changeButtonStyle, renderArray, renderTasks, addProjectDOM, editProject} from './DOMmanipulation.js';
+import {showForm, changeButtonStyle, renderArray, renderTasks, addProjectDOM, editProject, editText, confirmNameOfProject} from './DOMmanipulation.js';
 
 const addProjectButton = document.querySelector ('aside > button');
 let addTodoButton = document.querySelectorAll('.todo');
@@ -8,6 +8,10 @@ addTodoButton = addTodoButton[addTodoButton.length - 1].firstElementChild.firstE
 const projectContainer = document.querySelector('.projects');
 const taskContainer = document.querySelector('#tasks');
 const selectedProject = document.querySelector('main > h1');
+const editProjectName = document.querySelector('#editProjectName');
+const projectNameForm = document.querySelector('#projectNameForm');
+const projectNewName = document.querySelector('#inputProjectName');
+const confirmProjectNameButton = document.querySelector('#confirmProjectName');
 const confirmProject = document.querySelector('#addProject > button');
 
 //testing functions
@@ -23,6 +27,10 @@ renderTasks (taskContainer, selectedProject, todosList);
 
 //function to edit current project the user is seeing
 selectedProject.addEventListener('click', function(){editProject()});
+//function to edit project name
+editProjectName.addEventListener('click', function(){editText(projectNameForm, selectedProject)});
+//confirm project name by clicking 'OK'
+confirmProjectNameButton.addEventListener('click', function(){confirmNameOfProject(projectNewName, selectedProject), editText(projectNameForm, selectedProject)});
 
 //adds function to add project button
 addProjectButton.addEventListener('click', function(){showForm(document.querySelector('#addProject'))});

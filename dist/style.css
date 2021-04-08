@@ -121,3 +121,10 @@ button:active, button:focus {
     display: none;
     margin: 10px 10px 10px 0;
 }
+
+.hidden {
+    display: none;
+}
+.shown {
+    display: block;
+}

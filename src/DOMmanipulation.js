@@ -103,11 +103,32 @@ function editProject () {
     }
 }
 
+//edit name of a project
+function editText (inputForm, text) {
+    const inputProjectName = document.querySelector('#inputProjectName');
+
+    if (inputForm.className === 'hidden') {
+        inputForm.className = 'shown';
+        text.className = 'hidden';
+        inputProjectName.value = text.textContent;
+    }
+    else {
+        inputForm.className = 'hidden';
+        text.className = 'shown';
+    }
+}
+
+function confirmNameOfProject (name, text) {
+    text.textContent = name.value;
+}
+
 export {
     showForm,
     changeButtonStyle,
     renderArray,
     renderTasks,
     addProjectDOM,
-    editProject
+    editProject,
+    editText,
+    confirmNameOfProject
 };
