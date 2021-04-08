@@ -93,10 +93,21 @@ function renderTasks (container, selectedProject, array) {
     }
 }
 
+function editProject () {
+    const options = document.querySelector('#projectOptions');
+    if (options.style.display === 'none') {
+        options.style.display = 'block';
+    }
+    else {
+        options.style.display = 'none';
+    }
+}
+
 export {
     showForm,
     changeButtonStyle,
     renderArray,
     renderTasks,
-    addProjectDOM
+    addProjectDOM,
+    editProject
 };

@@ -1,6 +1,6 @@
 import '../dist/style.css';
 import {todosList, projects, addTodo, addProject} from './objects.js';
-import {showForm, changeButtonStyle, renderArray, renderTasks, addProjectDOM} from './DOMmanipulation.js';
+import {showForm, changeButtonStyle, renderArray, renderTasks, addProjectDOM, editProject} from './DOMmanipulation.js';
 
 const addProjectButton = document.querySelector ('aside > button');
 let addTodoButton = document.querySelectorAll('.todo');
@@ -21,13 +21,16 @@ renderArray (projectContainer, projects);
 //renders tasks in selected project (general as default on app load)
 renderTasks (taskContainer, selectedProject, todosList);
 
+//function to edit current project the user is seeing
+selectedProject.addEventListener('click', function(){editProject()});
+
 //adds function to add project button
 addProjectButton.addEventListener('click', function(){showForm(document.querySelector('#addProject'))});
 addProjectButton.addEventListener('click', function(){changeButtonStyle(addProjectButton)});
 
 //adds function to confirm project button (the button that
 //adds a new project to the list)
-confirmProject.addEventListener('click', function() {addProjectDOM(projects)});
+confirmProject.addEventListener('click', function(){addProjectDOM(projects)});
 confirmProject.addEventListener('click', function(){showForm(document.querySelector('#addProject'))});
 confirmProject.addEventListener('click', function(){changeButtonStyle(addProjectButton)});
 

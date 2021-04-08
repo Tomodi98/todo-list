@@ -27,6 +27,11 @@ h1, h2 {
     padding: 0;
 }
 
+h1:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .projects > div {
     margin-top: 15px;
     cursor: pointer;
@@ -110,4 +115,9 @@ button:active, button:focus {
 .crossButton {
     background-color: red;
     transform: rotate(45deg);
+}
+
+#projectOptions {
+    display: none;
+    margin: 10px 10px 10px 0;
 }
